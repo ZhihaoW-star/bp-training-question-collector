@@ -1,0 +1,16 @@
+{
+  "name": "bp-training-question-collector",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}
