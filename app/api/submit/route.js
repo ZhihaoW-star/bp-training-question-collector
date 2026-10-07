@@ -18,6 +18,13 @@ export async function POST(request) {
     return NextResponse.json({ error: "Invalid JSON body." }, { status: 400 });
   }
 
+  if (body === null || typeof body !== "object" || Array.isArray(body)) {
+    return NextResponse.json(
+      { error: "Submission must be a JSON object." },
+      { status: 400 }
+    );
+  }
+
   const name = cleanText(body.name);
   const experience = cleanText(body.experience);
   const rawQuestion = cleanText(body.rawQuestion);
